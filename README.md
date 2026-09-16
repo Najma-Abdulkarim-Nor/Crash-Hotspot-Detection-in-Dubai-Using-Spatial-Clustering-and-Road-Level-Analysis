@@ -8,7 +8,8 @@ Canadian University Dubai, United Arab Emirates
 
 **2026 IEEE International Conference on Smart Mobility (SM2026)** · Al Alamein City, Egypt · 11–13 May 2026
 
-[![Paper](https://img.shields.io/badge/IEEE%20Xplore-Paper-00629B?logo=ieee&logoColor=white)](PAPER_LINK_HERE)
+[![Paper](https://img.shields.io/badge/IEEE%20Xplore-Paper-00629B?logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11614141)
+[![DOI](https://img.shields.io/badge/DOI-10.1109%2FSM69703.2026.11614141-blue)](https://doi.org/10.1109/SM69703.2026.11614141)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Method](https://img.shields.io/badge/Method-DBSCAN-orange)]()
 [![Domain](https://img.shields.io/badge/Domain-Smart%20Mobility-informational)]()
@@ -111,11 +112,10 @@ If you use this work, please cite:
   title     = {Crash Hotspot Detection in Dubai using DBSCAN and Severity Weighting},
   booktitle = {2026 IEEE International Conference on Smart Mobility (SM)},
   year      = {2026},
-  address   = {Al Alamein City, Egypt}
+  address   = {Al Alamein City, Egypt},
+  doi       = {10.1109/SM69703.2026.11614141}
 }
 ```
-
-*(DOI to be added once confirmed — see note below)*
 
 ## 👥 Authors
 
