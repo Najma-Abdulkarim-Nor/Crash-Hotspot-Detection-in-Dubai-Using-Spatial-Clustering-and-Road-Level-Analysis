@@ -11,12 +11,21 @@ Canadian University Dubai, United Arab Emirates
 [![Paper](https://img.shields.io/badge/IEEE%20Xplore-Paper-00629B?logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11614141)
 [![DOI](https://img.shields.io/badge/DOI-10.1109%2FSM69703.2026.11614141-blue)](https://doi.org/10.1109/SM69703.2026.11614141)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Method](https://img.shields.io/badge/Method-DBSCAN-orange)]()
-[![Domain](https://img.shields.io/badge/Domain-Smart%20Mobility-informational)]()
+[![Method](https://img.shields.io/badge/Method-DBSCAN-orange)](https://en.wikipedia.org/wiki/DBSCAN)
+[![Domain](https://img.shields.io/badge/Domain-Smart%20Mobility-informational)](https://ieeesm.org/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Map-38bdf8)](https://claude.ai/artifact/UkbDgk7Hmk2jDv7stjDyFU)
 
 </div>
 
 ---
+
+## 🗺️ Live Demo
+
+**[View the interactive hotspot map →](https://claude.ai/artifact/UkbDgk7Hmk2jDv7stjDyFU)**
+
+Built from the actual Dubai Police traffic incident dataset (via [Data.Dubai](https://data.dubai)), filtered to 14–30 March 2026 — the same 16-day window used in the paper — and run through the full pipeline: severity weighting from the incident's own Arabic category text, DBSCAN clustering (ε=200m, minPts=4, Haversine distance), risk scoring, and peak time-window detection. **5,256 real incidents** were analyzed, producing **302 clusters**. The top hotspot, **Al Satwa** (86 incidents, risk score 102), peaks 20:00–22:00 — consistent with the paper's finding of an evening/late-night surge.
+
+> Location names are nearest-landmark matches rather than a live reverse-geocoding call (Nominatim isn't reachable from the analysis environment used to build this demo) — see the map page for full methodology notes.
 
 ## 📝 Abstract
 
@@ -96,7 +105,7 @@ cd Crash-Hotspot-Detection-in-Dubai-Using-Spatial-Clustering-and-Road-Level-Anal
 pip install -r requirements.txt
 ```
 
-1. Download the [Dubai Pulse Traffic Incidents dataset](https://www.dubaipulse.gov.ae/data/dp-traffic/dp_traffic_incidents-open) and place the CSV where the notebook can find it.
+1. Download the Traffic Incidents dataset from [Data.Dubai](https://data.dubai/en/l/469979) (Dubai Police, tagged "Open" — freely downloadable as CSV, no account required) and place the CSV where the notebook can find it.
 2. Open `notebooks/Crash_Hotspot_Detection_DBSCAN.ipynb`, update the `DATA_PATH` and `COLUMN_MAPPING` in the loading cell to match your file, and run all cells.
 3. The notebook will clean and filter the data, weight incidents by severity, run DBSCAN clustering with a Haversine distance metric, score and rank hotspots by risk, detect each hotspot's peak-risk time window, reverse-geocode cluster centroids into readable labels, and render an interactive Folium map — saving both a CSV summary and an HTML map at the end.
 
