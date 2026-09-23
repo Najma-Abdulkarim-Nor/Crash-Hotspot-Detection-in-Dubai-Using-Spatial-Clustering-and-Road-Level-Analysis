@@ -5,6 +5,7 @@
 **Maryam Alblooshi** · **Najma Nour** · **Khalid Elgazzar**
 
 Canadian University Dubai, United Arab Emirates
+**IoT Research Laboratory, Ontario Tech University, Canada 
 
 **2026 IEEE International Conference on Smart Mobility (SM2026)** · Al Alamein City, Egypt · 11–13 May 2026
 
