@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚦 Crash Hotspot Detection in Dubai Using DBSCAN and Severity Weighting
+#  Crash Hotspot Detection in Dubai Using DBSCAN and Severity Weighting
 
 **Maryam Alblooshi** · **Najma Nour** · **Khalid Elgazzar**
 
@@ -19,7 +19,7 @@ Canadian University Dubai, United Arab Emirates
 
 ---
 
-## 🗺️ Live Demo
+##  Live Demo
 
 **[View the interactive hotspot map →](https://claude.ai/artifact/UkbDgk7Hmk2jDv7stjDyFU)**
 
@@ -27,19 +27,19 @@ Built from the actual Dubai Police traffic incident dataset (via [Data.Dubai](ht
 
 > Location names are nearest-landmark matches rather than a live reverse-geocoding call (Nominatim isn't reachable from the analysis environment used to build this demo) — see the map page for full methodology notes.
 
-## 📝 Abstract
+##  Abstract
 
 > Rapidly growing cities such as Dubai frequently experience a high number of traffic-related incidents. To reduce those incidents, transportation authorities must prioritize and classify locations with a high number of accidents. This research introduces a method for identifying high-crash areas, employing DBSCAN clustering and severity-weighted hotspot scoring. The methodology utilizes geographic coordinates, road classifications, and community designations to improve the clarity of results. The analysis showed that certain areas, particularly major roads, had a higher number of accidents. The model is proving to be quite useful, easily understood, and it fits right in with smart mobility applications.
 
-## 🔑 Highlights
+##  Highlights
 
-- 📍 **Density-based spatial clustering (DBSCAN)** identifies crash hotspots without needing to pre-specify the number of clusters
-- ⚖️ **Severity-weighted risk scoring** — clusters with fewer but more severe incidents are ranked above clusters with many minor ones
-- 🕒 **Temporal pattern analysis** — incidents are grouped into 2-hour windows to surface each hotspot's peak-risk period
-- 🗺️ **Reverse geocoding** turns raw coordinate clusters into human-readable location labels (nearby roads, neighborhoods, districts)
-- 🏙️ Built and validated on a real ~5,000-record traffic incident dataset from the Dubai open-data ecosystem
+-  **Density-based spatial clustering (DBSCAN)** identifies crash hotspots without needing to pre-specify the number of clusters
+-  **Severity-weighted risk scoring** — clusters with fewer but more severe incidents are ranked above clusters with many minor ones
+-  **Temporal pattern analysis** — incidents are grouped into 2-hour windows to surface each hotspot's peak-risk period
+-  **Reverse geocoding** turns raw coordinate clusters into human-readable location labels (nearby roads, neighborhoods, districts)
+-  Built and validated on a real ~5,000-record traffic incident dataset from the Dubai open-data ecosystem
 
-## 🧩 Method Overview
+##  Method Overview
 
 ```
 Traffic Incident Dataset
@@ -68,21 +68,21 @@ Spatial Annotation & Cluster Visualization (reverse geocoding)
 
 Full methodology, dataset description, results, and discussion are in the [paper](paper/).
 
-## 📊 Results
+##  Results
 
 - DBSCAN identified numerous statistically significant high-density crash zones that correspond to established hotspots in Dubai, while successfully excluding noise/outlier points.
 - Several hotspots showed a clear surge in incidents during **evening and late-night hours**, consistent with heavier traffic and reduced visibility.
 - Major roads and high-density community areas emerged as the most consistent hotspot locations.
 - The severity-weighted scoring approach provided a more informative hotspot ranking than raw incident counts alone — prioritizing clusters with fewer but more serious crashes.
 
-## ⚠️ Limitations
+##  Limitations
 
 - Defining precise road segments within detected clusters is difficult without more detailed road-network data.
 - Reverse geocoding via an external provider limits the precision of location labels.
 - Incident severity is inferred from free-text category keywords rather than a dedicated severity field, which may introduce classification noise.
 - The framework currently analyzes a static dataset snapshot rather than a real-time incident stream.
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 Crash-Hotspot-Detection-in-Dubai/
@@ -97,7 +97,7 @@ Crash-Hotspot-Detection-in-Dubai/
 └── README.md
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```bash
 git clone https://github.com/Najma-Abdulkarim-Nor/Crash-Hotspot-Detection-in-Dubai-Using-Spatial-Clustering-and-Road-Level-Analysis.git
@@ -109,9 +109,9 @@ pip install -r requirements.txt
 2. Open `notebooks/Crash_Hotspot_Detection_DBSCAN.ipynb`, update the `DATA_PATH` and `COLUMN_MAPPING` in the loading cell to match your file, and run all cells.
 3. The notebook will clean and filter the data, weight incidents by severity, run DBSCAN clustering with a Haversine distance metric, score and rank hotspots by risk, detect each hotspot's peak-risk time window, reverse-geocode cluster centroids into readable labels, and render an interactive Folium map — saving both a CSV summary and an HTML map at the end.
 
-> 💻 **Note:** The keyword lists used for severity classification (`SEVERE_KEYWORDS`, `MODERATE_KEYWORDS`, `MINOR_KEYWORDS`) are a starting point based on the paper's description — refine them to match the exact vocabulary in your dataset's incident-description field for best results.
+>  **Note:** The keyword lists used for severity classification (`SEVERE_KEYWORDS`, `MODERATE_KEYWORDS`, `MINOR_KEYWORDS`) are a starting point based on the paper's description — refine them to match the exact vocabulary in your dataset's incident-description field for best results.
 
-## 📖 Citation
+##  Citation
 
 If you use this work, please cite:
 
@@ -126,12 +126,12 @@ If you use this work, please cite:
 }
 ```
 
-## 👥 Authors
+##  Authors
 
 - **Maryam Alblooshi** — Canadian University Dubai, UAE
 - **Najma Nour** — Canadian University Dubai, UAE
 - **Khalid Elgazzar** — IoT Research Laboratory, Ontario Tech University, Canada
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
